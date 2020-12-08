@@ -9,6 +9,7 @@
         <e p="Script" t="Include">
           <e p="EricScrollView.cs" t="Include" />
           <e p="PageDots.cs" t="Include" />
+          <e p="ReadMe.cs" t="Include" />
           <e p="ScrollItem.cs" t="Include" />
         </e>
       </e>

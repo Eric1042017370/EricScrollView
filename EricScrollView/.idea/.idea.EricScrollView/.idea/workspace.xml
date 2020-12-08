@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1d08197-2c69-4051-8aba-390203201e6d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.EricScrollView/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EricScrollView/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/pages/Image (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/pages/Image (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/pages/Image (2).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/pages/Image (2).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefab/pages/Image (3).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/pages/Image (3).prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Read Me.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Read Me.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Eric Scroll View.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefab/Eric Scroll View.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/ReadMe.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/ReadMe.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EricScrollView/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EricScrollView/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EricScrollView/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EricScrollView/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/EricScrollView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/EricScrollView.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/ScrollItem.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="306">
+              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding>
                 <marker date="1607407781309" expanded="false" signature="6:78" ph="..." />
                 <marker date="1607407781309" expanded="true" signature="119:678" ph="{...}" />
@@ -32,63 +37,76 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/EricScrollView.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="448">
+              <caret line="141" column="54" selection-start-line="141" selection-start-column="54" selection-end-line="141" selection-end-column="54" />
               <folding>
-                <marker date="1607415079538" expanded="true" signature="6:297" ph="..." />
-                <marker date="1607415079538" expanded="true" signature="342:9591" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="349:2370" ph="Field" />
-                <marker date="1607415079538" expanded="true" signature="368:641" ph="pageDots" />
-                <marker date="1607415079538" expanded="true" signature="647:2354" ph="Page" />
-                <marker date="1607415079538" expanded="true" signature="1291:1346" ph="/// 每个page所占的滑动比例点 ... " />
-                <marker date="1607415079538" expanded="true" signature="1382:1428" ph="/// 显示中心点 ... " />
-                <marker date="1607415079538" expanded="true" signature="1472:1528" ph="/// ScrollView视窗的一半 ... " />
-                <marker date="1607415079538" expanded="true" signature="1584:1662" ph="/// 缩放影响的最大距离 ... " />
-                <marker date="1607415079538" expanded="true" signature="1727:1779" ph="/// 缩放影响最大距离的倒数 ... " />
-                <marker date="1607415079538" expanded="true" signature="1854:1912" ph="/// 第一个item的localx坐标值 ... " />
-                <marker date="1607415079538" expanded="true" signature="1956:2009" ph="/// 第一个item的x坐标值 ... " />
-                <marker date="1607415079538" expanded="true" signature="2091:2178" ph="/// scrollRect有效滚动距离（Content下第0个item到最后一个之间的距离）的倒数 ... " />
-                <marker date="1607415079538" expanded="true" signature="2376:8930" ph="Method" />
-                <marker date="1607415079538" expanded="true" signature="2461:2519" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="2525:2571" ph="/// 初始化成员 ... " />
-                <marker date="1607415079538" expanded="true" signature="2602:2969" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="2975:3138" ph="/// 初始化需要scrollview规划子物体pos后再初始化的字段 ... " />
-                <marker date="1607415079538" expanded="true" signature="3182:3823" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="3686:3817" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="3858:4671" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="4677:4767" ph="/// ScrollView滚动回调 ... " />
-                <marker date="1607415079538" expanded="true" signature="4806:4848" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="4855:4911" ph="/// 初始化content子物体页面 ... " />
-                <marker date="1607415079538" expanded="true" signature="4940:6067" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="5124:5451" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="5181:5340" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="5480:5723" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="5622:5713" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="5789:6061" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="6073:6122" ph="/// 初始化其他管理器 ... " />
-                <marker date="1607415079538" expanded="true" signature="6152:6347" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="6193:6273" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="6354:6399" ph="/// 滑动停靠 ... " />
-                <marker date="1607415079538" expanded="true" signature="6427:6894" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="6574:6841" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="6723:6831" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="6900:7051" ph="/// 停靠到中点协程 ... " />
-                <marker date="1607415079538" expanded="true" signature="7094:8464" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="7121:8458" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="7779:8163" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="8470:8590" ph="/// 计算点到view中心点的x轴距离 ... " />
-                <marker date="1607415079538" expanded="true" signature="8640:8700" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="8706:8824" ph="/// 获取滑动点的视口比例 ... " />
-                <marker date="1607415079538" expanded="true" signature="8870:8914" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="8936:9589" ph="Interface" />
-                <marker date="1607415079538" expanded="true" signature="8959:9124" ph="/// 获取viewItem ... " />
-                <marker date="1607415079538" expanded="true" signature="9176:9375" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="9235:9327" ph="{...}" />
-                <marker date="1607415079538" expanded="true" signature="9381:9476" ph="/// 停靠到中间，根据index ... " />
-                <marker date="1607415079538" expanded="true" signature="9518:9573" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="6:297" ph="..." />
+                <marker date="1607426420342" expanded="true" signature="342:9496" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="349:2188" ph="Field" />
+                <marker date="1607426420342" expanded="true" signature="368:641" ph="pageDots" />
+                <marker date="1607426420342" expanded="true" signature="647:2172" ph="Page" />
+                <marker date="1607426420342" expanded="true" signature="1291:1346" ph="/// 每个page所占的滑动比例点 ... " />
+                <marker date="1607426420342" expanded="true" signature="1382:1428" ph="/// 显示中心点 ... " />
+                <marker date="1607426420342" expanded="true" signature="1472:1528" ph="/// ScrollView视窗的一半 ... " />
+                <marker date="1607426420342" expanded="true" signature="1584:1662" ph="/// 缩放影响的最大距离 ... " />
+                <marker date="1607426420342" expanded="true" signature="1727:1779" ph="/// 缩放影响最大距离的倒数 ... " />
+                <marker date="1607426420342" expanded="true" signature="1854:1912" ph="/// 第一个item的localx坐标值 ... " />
+                <marker date="1607426420342" expanded="true" signature="1999:2086" ph="/// scrollRect有效滚动距离（Content下第0个item到最后一个之间的距离）的倒数 ... " />
+                <marker date="1607426420342" expanded="true" signature="2194:8835" ph="Method" />
+                <marker date="1607426420342" expanded="true" signature="2279:2337" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="2343:2389" ph="/// 初始化成员 ... " />
+                <marker date="1607426420342" expanded="true" signature="2420:2787" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="2793:2956" ph="/// 初始化需要scrollview规划子物体pos后再初始化的字段 ... " />
+                <marker date="1607426420342" expanded="true" signature="3000:3585" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="3448:3579" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="3620:4433" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="4439:4529" ph="/// ScrollView滚动回调 ... " />
+                <marker date="1607426420342" expanded="true" signature="4568:4610" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="4617:4673" ph="/// 初始化content子物体页面 ... " />
+                <marker date="1607426420342" expanded="true" signature="4702:5972" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="4895:5222" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="4952:5111" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="5251:5494" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="5393:5484" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="5560:5966" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="5825:5921" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="5978:6027" ph="/// 初始化其他管理器 ... " />
+                <marker date="1607426420342" expanded="true" signature="6057:6252" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="6098:6178" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="6259:6304" ph="/// 滑动停靠 ... " />
+                <marker date="1607426420342" expanded="true" signature="6332:6799" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="6479:6746" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="6628:6736" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="6805:6956" ph="/// 停靠到中点协程 ... " />
+                <marker date="1607426420342" expanded="true" signature="6999:8369" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="7026:8363" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="7684:8068" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="8375:8495" ph="/// 计算点到view中心点的x轴距离 ... " />
+                <marker date="1607426420342" expanded="true" signature="8545:8605" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="8611:8729" ph="/// 获取滑动点的视口比例 ... " />
+                <marker date="1607426420342" expanded="true" signature="8775:8819" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="8841:9494" ph="Interface" />
+                <marker date="1607426420342" expanded="true" signature="8864:9029" ph="/// 获取viewItem ... " />
+                <marker date="1607426420342" expanded="true" signature="9081:9280" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="9140:9232" ph="{...}" />
+                <marker date="1607426420342" expanded="true" signature="9286:9381" ph="/// 停靠到中间，根据index ... " />
+                <marker date="1607426420342" expanded="true" signature="9423:9478" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Script/ReadMe.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding>
+                <marker date="1607426767882" expanded="false" signature="6:97" ph="..." />
+                <marker date="1607426767882" expanded="true" signature="176:458" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -97,7 +115,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/958B02B1-87A7-4CBD-B623-46D66445CAFE/5b/bcaf6b1a/Assert.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="238">
               <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
             </state>
           </provider>
@@ -124,7 +142,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Script/PageDots.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
+            <state relative-caret-position="850">
               <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
               <folding>
                 <marker date="1592049077282" expanded="true" signature="6:146" ph="..." />
@@ -163,27 +181,29 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26B82565-ADE7-4A40-81E7-5AA5F961E028/c5/cca2a14e/NativeHeaderAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EA989771-5564-4591-BB3A-9B7C30C35BBE/33/cb95a11e/IEventSystemHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/958B02B1-87A7-4CBD-B623-46D66445CAFE/5b/bcaf6b1a/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EA989771-5564-4591-BB3A-9B7C30C35BBE/5d/eb129e05/IPointerClickHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26B82565-ADE7-4A40-81E7-5AA5F961E028/6f/13674ef0/RequiredByNativeCodeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/PageDots.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/ReadMe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/ae/f8d5be52/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/63/fcd7450e/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/cc/689ff1cf/Math.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/HorizontalLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/64/20502203/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EA989771-5564-4591-BB3A-9B7C30C35BBE/68/ea1425a7/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/98/5af5419b/SerializeField.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6B22E771-5C41-4C91-A28C-2B5FDC5C6134/1d/41a0000e/SpecialNameAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/ScrollItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/EricScrollView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/08/1bc46403/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/74/5bf7734e/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/958B02B1-87A7-4CBD-B623-46D66445CAFE/5b/bcaf6b1a/Assert.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26B82565-ADE7-4A40-81E7-5AA5F961E028/6f/13674ef0/RequiredByNativeCodeAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/958B02B1-87A7-4CBD-B623-46D66445CAFE/80/f888151d/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/ae/f8d5be52/RectTransform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/63/fcd7450e/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/ScrollItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/PageDots.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/EricScrollView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/437BA245-D840-4784-B9FB-AB9B439AC908/cc/689ff1cf/Math.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/HorizontalLayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EA989771-5564-4591-BB3A-9B7C30C35BBE/68/ea1425a7/IPointerUpHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6B22E771-5C41-4C91-A28C-2B5FDC5C6134/1d/41a0000e/SpecialNameAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Layout/LayoutGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../2019.3.2f1/Unity/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -191,7 +211,9 @@
         <option value="$PROJECT_DIR$/Assets/Script/ViewItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/PageDots.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/ScrollItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/ReadMe.cs" />
         <option value="$PROJECT_DIR$/Assets/Script/EricScrollView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Script/ReadMe.cs" />
       </list>
     </option>
   </component>
@@ -203,8 +225,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="783" />
-    <option name="width" value="1144" />
+    <option name="x" value="1053" />
+    <option name="width" value="874" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -265,11 +287,12 @@
       <workItem from="1592040436101" duration="17377000" />
       <workItem from="1607396010230" duration="3195000" />
       <workItem from="1607407040153" duration="5134000" />
+      <workItem from="1607422104452" duration="3477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43444000" />
+    <option name="totallyTimeSpent" value="46921000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,7 +304,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="783" y="0" width="1144" height="1047" extended-state="0" />
+    <frame x="951" y="0" width="976" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24946237" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -511,6 +535,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/958B02B1-87A7-4CBD-B623-46D66445CAFE/5b/bcaf6b1a/Assert.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94C5F4C3-8CDC-42D2-B006-F8BADEF04394/63/fcd7450e/Mathf.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3485">
@@ -527,7 +558,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/PageDots.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
+        <state relative-caret-position="850">
           <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
           <folding>
             <marker date="1592049077282" expanded="true" signature="6:146" ph="..." />
@@ -549,17 +580,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/958B02B1-87A7-4CBD-B623-46D66445CAFE/5b/bcaf6b1a/Assert.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/958B02B1-87A7-4CBD-B623-46D66445CAFE/80/f888151d/ScriptableObject.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-199">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ReadMe.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/ScrollItem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="306">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding>
             <marker date="1607407781309" expanded="false" signature="6:78" ph="..." />
             <marker date="1607407781309" expanded="true" signature="119:678" ph="{...}" />
@@ -572,60 +610,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Script/EricScrollView.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="448">
+          <caret line="141" column="54" selection-start-line="141" selection-start-column="54" selection-end-line="141" selection-end-column="54" />
           <folding>
-            <marker date="1607415079538" expanded="true" signature="6:297" ph="..." />
-            <marker date="1607415079538" expanded="true" signature="342:9591" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="349:2370" ph="Field" />
-            <marker date="1607415079538" expanded="true" signature="368:641" ph="pageDots" />
-            <marker date="1607415079538" expanded="true" signature="647:2354" ph="Page" />
-            <marker date="1607415079538" expanded="true" signature="1291:1346" ph="/// 每个page所占的滑动比例点 ... " />
-            <marker date="1607415079538" expanded="true" signature="1382:1428" ph="/// 显示中心点 ... " />
-            <marker date="1607415079538" expanded="true" signature="1472:1528" ph="/// ScrollView视窗的一半 ... " />
-            <marker date="1607415079538" expanded="true" signature="1584:1662" ph="/// 缩放影响的最大距离 ... " />
-            <marker date="1607415079538" expanded="true" signature="1727:1779" ph="/// 缩放影响最大距离的倒数 ... " />
-            <marker date="1607415079538" expanded="true" signature="1854:1912" ph="/// 第一个item的localx坐标值 ... " />
-            <marker date="1607415079538" expanded="true" signature="1956:2009" ph="/// 第一个item的x坐标值 ... " />
-            <marker date="1607415079538" expanded="true" signature="2091:2178" ph="/// scrollRect有效滚动距离（Content下第0个item到最后一个之间的距离）的倒数 ... " />
-            <marker date="1607415079538" expanded="true" signature="2376:8930" ph="Method" />
-            <marker date="1607415079538" expanded="true" signature="2461:2519" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="2525:2571" ph="/// 初始化成员 ... " />
-            <marker date="1607415079538" expanded="true" signature="2602:2969" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="2975:3138" ph="/// 初始化需要scrollview规划子物体pos后再初始化的字段 ... " />
-            <marker date="1607415079538" expanded="true" signature="3182:3823" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="3686:3817" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="3858:4671" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="4677:4767" ph="/// ScrollView滚动回调 ... " />
-            <marker date="1607415079538" expanded="true" signature="4806:4848" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="4855:4911" ph="/// 初始化content子物体页面 ... " />
-            <marker date="1607415079538" expanded="true" signature="4940:6067" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="5124:5451" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="5181:5340" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="5480:5723" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="5622:5713" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="5789:6061" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="6073:6122" ph="/// 初始化其他管理器 ... " />
-            <marker date="1607415079538" expanded="true" signature="6152:6347" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="6193:6273" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="6354:6399" ph="/// 滑动停靠 ... " />
-            <marker date="1607415079538" expanded="true" signature="6427:6894" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="6574:6841" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="6723:6831" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="6900:7051" ph="/// 停靠到中点协程 ... " />
-            <marker date="1607415079538" expanded="true" signature="7094:8464" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="7121:8458" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="7779:8163" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="8470:8590" ph="/// 计算点到view中心点的x轴距离 ... " />
-            <marker date="1607415079538" expanded="true" signature="8640:8700" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="8706:8824" ph="/// 获取滑动点的视口比例 ... " />
-            <marker date="1607415079538" expanded="true" signature="8870:8914" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="8936:9589" ph="Interface" />
-            <marker date="1607415079538" expanded="true" signature="8959:9124" ph="/// 获取viewItem ... " />
-            <marker date="1607415079538" expanded="true" signature="9176:9375" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="9235:9327" ph="{...}" />
-            <marker date="1607415079538" expanded="true" signature="9381:9476" ph="/// 停靠到中间，根据index ... " />
-            <marker date="1607415079538" expanded="true" signature="9518:9573" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="6:297" ph="..." />
+            <marker date="1607426420342" expanded="true" signature="342:9496" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="349:2188" ph="Field" />
+            <marker date="1607426420342" expanded="true" signature="368:641" ph="pageDots" />
+            <marker date="1607426420342" expanded="true" signature="647:2172" ph="Page" />
+            <marker date="1607426420342" expanded="true" signature="1291:1346" ph="/// 每个page所占的滑动比例点 ... " />
+            <marker date="1607426420342" expanded="true" signature="1382:1428" ph="/// 显示中心点 ... " />
+            <marker date="1607426420342" expanded="true" signature="1472:1528" ph="/// ScrollView视窗的一半 ... " />
+            <marker date="1607426420342" expanded="true" signature="1584:1662" ph="/// 缩放影响的最大距离 ... " />
+            <marker date="1607426420342" expanded="true" signature="1727:1779" ph="/// 缩放影响最大距离的倒数 ... " />
+            <marker date="1607426420342" expanded="true" signature="1854:1912" ph="/// 第一个item的localx坐标值 ... " />
+            <marker date="1607426420342" expanded="true" signature="1999:2086" ph="/// scrollRect有效滚动距离（Content下第0个item到最后一个之间的距离）的倒数 ... " />
+            <marker date="1607426420342" expanded="true" signature="2194:8835" ph="Method" />
+            <marker date="1607426420342" expanded="true" signature="2279:2337" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="2343:2389" ph="/// 初始化成员 ... " />
+            <marker date="1607426420342" expanded="true" signature="2420:2787" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="2793:2956" ph="/// 初始化需要scrollview规划子物体pos后再初始化的字段 ... " />
+            <marker date="1607426420342" expanded="true" signature="3000:3585" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="3448:3579" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="3620:4433" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="4439:4529" ph="/// ScrollView滚动回调 ... " />
+            <marker date="1607426420342" expanded="true" signature="4568:4610" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="4617:4673" ph="/// 初始化content子物体页面 ... " />
+            <marker date="1607426420342" expanded="true" signature="4702:5972" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="4895:5222" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="4952:5111" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="5251:5494" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="5393:5484" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="5560:5966" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="5825:5921" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="5978:6027" ph="/// 初始化其他管理器 ... " />
+            <marker date="1607426420342" expanded="true" signature="6057:6252" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="6098:6178" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="6259:6304" ph="/// 滑动停靠 ... " />
+            <marker date="1607426420342" expanded="true" signature="6332:6799" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="6479:6746" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="6628:6736" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="6805:6956" ph="/// 停靠到中点协程 ... " />
+            <marker date="1607426420342" expanded="true" signature="6999:8369" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="7026:8363" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="7684:8068" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="8375:8495" ph="/// 计算点到view中心点的x轴距离 ... " />
+            <marker date="1607426420342" expanded="true" signature="8545:8605" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="8611:8729" ph="/// 获取滑动点的视口比例 ... " />
+            <marker date="1607426420342" expanded="true" signature="8775:8819" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="8841:9494" ph="Interface" />
+            <marker date="1607426420342" expanded="true" signature="8864:9029" ph="/// 获取viewItem ... " />
+            <marker date="1607426420342" expanded="true" signature="9081:9280" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="9140:9232" ph="{...}" />
+            <marker date="1607426420342" expanded="true" signature="9286:9381" ph="/// 停靠到中间，根据index ... " />
+            <marker date="1607426420342" expanded="true" signature="9423:9478" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Script/ReadMe.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <marker date="1607426767882" expanded="false" signature="6:97" ph="..." />
+            <marker date="1607426767882" expanded="true" signature="176:458" ph="{...}" />
           </folding>
         </state>
       </provider>

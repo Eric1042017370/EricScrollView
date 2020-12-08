@@ -83,11 +83,6 @@ public class EricScrollView : MonoBehaviour
     /// </summary>
     private float firstItemLocalPosX;
 
-    /// <summary>
-    /// 第一个item的x坐标值
-    /// </summary>
-    private float firstItemPosX;
-
     private float scrollWidthReciprocal;
 
 
@@ -95,10 +90,7 @@ public class EricScrollView : MonoBehaviour
     /// scrollRect有效滚动距离（Content下第0个item到最后一个之间的距离）的倒数
     /// </summary>
     public float ScrollWidthReciprocal => scrollWidthReciprocal;
-
-    public const float minScale = 0.5f;
-
-    public const float DecreaseVelocityRate = 0.95f;
+    
 
     #endregion
 
@@ -136,12 +128,10 @@ public class EricScrollView : MonoBehaviour
     /// <exception cref="NotImplementedException"></exception>
     private IEnumerator InitNeedNextFrame()
     {
-        firstItemPosX = m_Pages[0].transform.position.x;
-        
         yield return null;
         firstItemLocalPosX = m_Pages[0].transform.localPosition.x;
         scrollWidthReciprocal =
-            1 / (m_Pages[m_Pages.Length - 1].transform.position.x - m_Pages[0].transform.position.x);
+            1 / (m_Pages[m_Pages.Length - 1].transform.localPosition.x - m_Pages[0].transform.localPosition.x);
 
         //初始化页面坐标相对scrollview的视口比例
         m_Ratios = new float[m_Pages.Length];
