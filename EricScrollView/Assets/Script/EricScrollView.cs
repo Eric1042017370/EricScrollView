@@ -187,7 +187,8 @@ public class EricScrollView : MonoBehaviour
     {
         m_PageContent = transform.Find("Scroll View/Viewport/Content");
         bool loadFromPrefab = true;
-        //初始化页面数组
+        
+        //初始化页签数组
         if (m_Pages == null || m_Pages.Length == 0)
         {
             if (m_PageContent.childCount == 0)
@@ -212,14 +213,18 @@ public class EricScrollView : MonoBehaviour
             }
         }
 
-        //初始化页面
+        //初始化页签
         for (int i = 0; i < m_Pages.Length; i++)
         {
             m_Pages[i] = loadFromPrefab
                 ? Instantiate(m_Pages[i], m_PageContent)
                 : m_PageContent.GetChild(i).gameObject;
-            var viewItem = m_Pages[i].GetComponent<ScrollItem>();
-            viewItem.Init(this);
+            var scrollItem = m_Pages[i].GetComponent<ScrollItem>();
+            if (scrollItem==null)
+            {
+                scrollItem = m_Pages[i].AddComponent<ScrollItem>();
+            }
+            scrollItem.Init(this);
         }
     }
 

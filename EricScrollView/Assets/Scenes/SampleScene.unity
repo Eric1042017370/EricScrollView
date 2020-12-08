@@ -1142,7 +1142,10 @@ MonoBehaviour:
   DotImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   pageDotMatchPageCount: 1
   itemSpacing: 60
-  m_Pages: []
+  m_Pages:
+  - {fileID: 3678665634624401725, guid: e018810e12f4c4445ad6fd0d14083938, type: 3}
+  - {fileID: 1967045173377418495, guid: da83cf83ead038a47b0afd9df5fd2ce5, type: 3}
+  - {fileID: 1724340129702857315, guid: 115e35803f35fd64a829eefdbd80e955, type: 3}
   resetSpeed: 3
   cellScale: 1
   harfViewWidth: 0
