@@ -28,14 +28,15 @@ public class EricScrollView : MonoBehaviour
     #endregion
 
     #region Page
-    [Tooltip("滑动页面：自己的panelPrefab")]
-    [SerializeField]
+
+    [Tooltip("滑动页面：自己的panelPrefab")] [SerializeField]
     private GameObject[] m_Pages;
-    [Tooltip("回弹弹性系数")]
-    [SerializeField] private int resetSpeed = 3;
-    [Range(0,1.5f)]
-    [Tooltip("单元格缩放比例，目前支持0~1.5")]
-    [SerializeField] public float cellScale = 1;
+
+    [Tooltip("回弹弹性系数")] [SerializeField] private int resetSpeed = 3;
+
+    [Range(0, 1.5f)] [Tooltip("单元格缩放比例，目前支持0~1.5")] [SerializeField]
+    public float cellScale = 1;
+
     private Transform m_PageContent;
     private HorizontalLayoutGroup m_HorizontalLayoutGroup;
     private ScrollRect m_ScrollRect;
@@ -44,8 +45,10 @@ public class EricScrollView : MonoBehaviour
 
     //停靠开关 max127
     private sbyte PullOverIndex = -1;
+
     //是否需要停靠
     private bool PullOverDirty = false;
+
     /// <summary>
     /// 每个page所占的滑动比例点
     /// </summary>
@@ -59,8 +62,7 @@ public class EricScrollView : MonoBehaviour
     /// <summary>
     /// ScrollView视窗的一半
     /// </summary>
-    [HideInInspector]
-    public float harfViewWidth;
+    [HideInInspector] public float harfViewWidth;
 
     /// <summary>
     /// 缩放影响的最大距离
@@ -71,8 +73,7 @@ public class EricScrollView : MonoBehaviour
     /// <summary>
     /// 缩放影响最大距离的倒数
     /// </summary>
-    [HideInInspector]
-    public float ScaleInfluenceDistanceReciprocal;
+    [HideInInspector] public float ScaleInfluenceDistanceReciprocal;
 
     /// <summary>
     /// 第一个item的localx坐标值
@@ -82,11 +83,11 @@ public class EricScrollView : MonoBehaviour
     /// <summary>
     /// 第一个item的x坐标值
     /// </summary>
-    private float firstItemPosX ;
+    private float firstItemPosX;
 
     private float scrollWidthReciprocal;
 
-   
+
     /// <summary>
     /// scrollRect有效滚动距离（Content下第0个item到最后一个之间的距离）的倒数
     /// </summary>
@@ -182,23 +183,36 @@ public class EricScrollView : MonoBehaviour
         m_PageContent = transform.Find("Scroll View/Viewport/Content");
         bool loadFromPrefab = true;
         //初始化页面数组
-        if (m_Pages==null||m_Pages.Length == 0)
+        if (m_Pages == null || m_Pages.Length == 0)
         {
-            if (m_PageContent.childCount==0)
+            if (m_PageContent.childCount == 0)
             {
                 Debug.LogError("Page个数不能为空，请添加page");
 #if UNITY_EDITOR
                 EditorApplication.isPlaying = false;
 #endif
             }
+
             m_Pages = new GameObject[m_PageContent.childCount];
             loadFromPrefab = false;
+        }
+
+        if (loadFromPrefab)
+        {
+            //清空content的子物体
+            var childCount = m_PageContent.childCount;
+            for (int i = 0; i < childCount; i++)
+            {
+                Destroy(m_PageContent.GetChild(i).gameObject);
+            }
         }
 
         //初始化页面
         for (int i = 0; i < m_Pages.Length; i++)
         {
-            m_Pages[i] = loadFromPrefab ? Instantiate(m_Pages[i], m_PageContent) : m_PageContent.GetChild(i).gameObject;
+            m_Pages[i] = loadFromPrefab
+                ? Instantiate(m_Pages[i], m_PageContent)
+                : m_PageContent.GetChild(i).gameObject;
             var viewItem = m_Pages[i].GetComponent<ScrollItem>();
             viewItem.Init(this);
         }
@@ -250,7 +264,7 @@ public class EricScrollView : MonoBehaviour
     {
         while (true)
         {
-            if (Input.GetMouseButtonUp(0)&&PullOverDirty)
+            if (Input.GetMouseButtonUp(0) && PullOverDirty)
                 PullOver();
             yield return null;
             if (PullOverIndex == -1)
@@ -258,9 +272,11 @@ public class EricScrollView : MonoBehaviour
             var recordPIndex = PullOverIndex;
             var target = GetViewItemByIndex((byte) PullOverIndex);
             var targetRatios = GetScrollRatios((byte) PullOverIndex);
-            var currentRatios = m_ScrollRect.horizontalNormalizedPosition;//(target.transform.position.x - firstItemPosX) * ScrollWidthReciprocal;
+            var currentRatios =
+                m_ScrollRect
+                    .horizontalNormalizedPosition; //(target.transform.position.x - firstItemPosX) * ScrollWidthReciprocal;
             if (targetRatios == currentRatios)
-                continue;                
+                continue;
             while (true)
             {
                 var distance = DistanceWithMidPos(target.position);
@@ -275,7 +291,7 @@ public class EricScrollView : MonoBehaviour
             //获取停靠后的scrollview的x值比例（0~1）
             m_ScrollRect.velocity = Vector2.zero;
             m_ScrollRect.horizontalNormalizedPosition = targetRatios;
-            PullOverIndex = recordPIndex == PullOverIndex?(sbyte)-1:PullOverIndex;
+            PullOverIndex = recordPIndex == PullOverIndex ? (sbyte) -1 : PullOverIndex;
             PullOverDirty = false;
         }
     }
@@ -326,7 +342,7 @@ public class EricScrollView : MonoBehaviour
     /// <param name="pageIndex"></param>
     public void MoveToMid(byte pageIndex)
     {
-        PullOverIndex = (sbyte)pageIndex;
+        PullOverIndex = (sbyte) pageIndex;
     }
 
     #endregion
