@@ -15,18 +15,23 @@ public class PageDots : MonoBehaviour
     private ContentSizeFitter m_SizeFitter;
     public int space = 50;
     private GameObject[] m_Dots;
-
+    private Sprite m_highLightImage;
+    private Sprite m_normalImage;
+    private sbyte currentHighLightIndex=-1;
     public Action OnDotClick;
     #endregion
     
  
 
-    private void InitDots(byte pageDotCount, Sprite dotImage)
+    private void InitDots(byte pageDotCount, Sprite normalImage, Sprite highLightImage)
     {
         Debug.Assert(transform.childCount>0,"[EricScrollView] PageDot Child is Missing");
         m_Dots = new GameObject[pageDotCount];
         m_DotTemplate = transform.GetChild(0).gameObject;
-        m_DotTemplate.GetComponent<Image>().sprite = dotImage;
+        m_normalImage = normalImage;
+        m_DotTemplate.GetComponent<Image>().sprite = normalImage;
+        m_highLightImage = highLightImage;
+        m_highLightImage = m_ScrollView.DotImageHighLight;
         for (int i = 0; i < pageDotCount; i++)
         {
             byte index = (byte)i;
@@ -34,8 +39,22 @@ public class PageDots : MonoBehaviour
             m_Dots[i].AddComponent<Button>().onClick.AddListener(() => { OnClick(index); });
         }
         m_DotTemplate.SetActive(false);
+        m_ScrollView.OnPullOver += OnPullOver;
+
     }
 
+    private void OnPullOver(sbyte itemIndex)
+    {
+        if (m_highLightImage!=null)
+        {
+            m_Dots[itemIndex].GetComponent<Image>().sprite = m_highLightImage;
+            if (currentHighLightIndex!=-1)
+                m_Dots[currentHighLightIndex].GetComponent<Image>().sprite = m_normalImage;
+            
+            currentHighLightIndex = itemIndex;
+        }
+    }
+    
     private void InitSelf(bool useLayOutGroup)
     {
         if (!useLayOutGroup)
@@ -82,7 +101,7 @@ public class PageDots : MonoBehaviour
 
         m_ScrollView = scrollView;
         InitSelf(pageDotCount>1);
-        InitDots(pageDotCount,dotImage);
+        InitDots(pageDotCount,dotImage,m_highLightImage);
         OnDotClick = null;
     }
 

@@ -18,10 +18,11 @@ public class EricScrollView : MonoBehaviour
 
     [SerializeField] [Tooltip("是否使用pageDot页签")]
     public bool usePageDot;
-
+    [SerializeField][Tooltip("初始显示的页签index")]
+    private sbyte StartIndex;
     public byte pageDotCount;
     public Sprite DotImage;
-
+    public Sprite DotImageHighLight;
     [Tooltip("页签和page数量保持一致")] 
     public bool pageDotMatchPageCount;
     private PageDots pageDotMgr;
@@ -40,6 +41,7 @@ public class EricScrollView : MonoBehaviour
     [Range(0, 1.5f)] [Tooltip("单元格缩放比例，目前支持0~1.5")] [SerializeField]
     public float cellScale = 1;
 
+    public Action<sbyte> OnPullOver;
     private Transform m_PageContent;
     private HorizontalLayoutGroup m_HorizontalLayoutGroup;
     private ScrollRect m_ScrollRect;
@@ -103,7 +105,6 @@ public class EricScrollView : MonoBehaviour
     {
         InitMemgers();
 
-        InitOthers();
     }
 
     /// <summary>
@@ -141,6 +142,9 @@ public class EricScrollView : MonoBehaviour
         {
             m_Ratios[i] = (m_Pages[i].transform.localPosition.x - firstItemLocalPosX) * ScrollWidthReciprocal;
         }
+        //初始化初始位置
+        InitOthers();
+        OnPullOver(0);
     }
 
     private void InitScrollView()
@@ -249,9 +253,11 @@ public class EricScrollView : MonoBehaviour
                 index = (sbyte) i;
             }
         }
+        
 
         //开启停靠
         PullOverIndex = index;
+        OnPullOver(index);
     }
 
     /// <summary>
