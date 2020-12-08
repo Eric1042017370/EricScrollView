@@ -22,13 +22,16 @@ public class EricScrollView : MonoBehaviour
     public byte pageDotCount;
     public Sprite DotImage;
 
-    [Tooltip("页签和page数量保持一致")] public bool pageDotMatchPageCount;
+    [Tooltip("页签和page数量保持一致")] 
+    public bool pageDotMatchPageCount;
     private PageDots pageDotMgr;
 
     #endregion
 
     #region Page
-
+    [Tooltip("滑动页签之间的间距")]
+    [SerializeField]
+    private float itemSpacing;
     [Tooltip("滑动页面：自己的panelPrefab")] [SerializeField]
     private GameObject[] m_Pages;
 
@@ -134,6 +137,7 @@ public class EricScrollView : MonoBehaviour
     private IEnumerator InitNeedNextFrame()
     {
         firstItemPosX = m_Pages[0].transform.position.x;
+        
         yield return null;
         firstItemLocalPosX = m_Pages[0].transform.localPosition.x;
         scrollWidthReciprocal =
@@ -153,6 +157,7 @@ public class EricScrollView : MonoBehaviour
     {
         m_HorizontalLayoutGroup = m_PageContent.gameObject.GetComponent<HorizontalLayoutGroup>();
         m_ScrollRect = transform.GetChild(0).GetComponent<ScrollRect>();
+        m_HorizontalLayoutGroup.spacing = itemSpacing;
         var leftPadding = ScaleInfluenceDistance - ((RectTransform) m_Pages[0].transform).rect.width * 0.5;
         var rightPadding = ScaleInfluenceDistance -
                            ((RectTransform) m_Pages[m_Pages.Length - 1].transform).rect.width * 0.5;

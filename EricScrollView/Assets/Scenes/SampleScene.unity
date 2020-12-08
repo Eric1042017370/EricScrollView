@@ -798,7 +798,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.00012207031, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &499178219889304892
 MonoBehaviour:
@@ -873,10 +873,10 @@ RectTransform:
   m_Father: {fileID: 499178219626948281}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0002562138, y: -0.00001775737}
-  m_SizeDelta: {x: 0, y: 736.4}
+  m_AnchoredPosition: {x: 0.00001533165, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &499178220214832730
 CanvasRenderer:
@@ -1141,12 +1141,10 @@ MonoBehaviour:
   pageDotCount: 3
   DotImage: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   pageDotMatchPageCount: 1
-  m_Pages:
-  - {fileID: 3678665634624401725, guid: e018810e12f4c4445ad6fd0d14083938, type: 3}
-  - {fileID: 1967045173377418495, guid: da83cf83ead038a47b0afd9df5fd2ce5, type: 3}
-  - {fileID: 1724340129702857315, guid: 115e35803f35fd64a829eefdbd80e955, type: 3}
+  itemSpacing: 60
+  m_Pages: []
   resetSpeed: 3
-  cellScale: 0.8
+  cellScale: 1
   harfViewWidth: 0
   ScaleInfluenceDistanceReciprocal: 0
 --- !u!224 &7100963899447373412
@@ -1165,8 +1163,8 @@ RectTransform:
   m_Father: {fileID: 1220740271}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: 0.000024796}
-  m_SizeDelta: {x: 1474.4, y: 813.1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
