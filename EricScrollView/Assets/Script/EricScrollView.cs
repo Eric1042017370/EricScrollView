@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -26,9 +28,14 @@ public class EricScrollView : MonoBehaviour
     #endregion
 
     #region Page
-
-    [SerializeField] private GameObject[] m_Pages;
+    [Tooltip("滑动页面：自己的panelPrefab")]
+    [SerializeField]
+    private GameObject[] m_Pages;
+    [Tooltip("回弹弹性系数")]
     [SerializeField] private int resetSpeed = 3;
+    [Range(0,1.5f)]
+    [Tooltip("单元格缩放比例，目前支持0~1.5")]
+    [SerializeField] public float cellScale = 1;
     private Transform m_PageContent;
     private HorizontalLayoutGroup m_HorizontalLayoutGroup;
     private ScrollRect m_ScrollRect;
@@ -52,17 +59,19 @@ public class EricScrollView : MonoBehaviour
     /// <summary>
     /// ScrollView视窗的一半
     /// </summary>
+    [HideInInspector]
     public float harfViewWidth;
 
     /// <summary>
     /// 缩放影响的最大距离
     /// </summary>
     /// <returns></returns>
-    public float ScaleInfluenceDistance => harfViewWidth;
+    private float ScaleInfluenceDistance => harfViewWidth;
 
     /// <summary>
     /// 缩放影响最大距离的倒数
     /// </summary>
+    [HideInInspector]
     public float ScaleInfluenceDistanceReciprocal;
 
     /// <summary>
@@ -75,8 +84,9 @@ public class EricScrollView : MonoBehaviour
     /// </summary>
     private float firstItemPosX ;
 
-    public float scrollWidthReciprocal;
+    private float scrollWidthReciprocal;
 
+   
     /// <summary>
     /// scrollRect有效滚动距离（Content下第0个item到最后一个之间的距离）的倒数
     /// </summary>
@@ -172,14 +182,21 @@ public class EricScrollView : MonoBehaviour
         m_PageContent = transform.Find("Scroll View/Viewport/Content");
         bool loadFromPrefab = true;
         //初始化页面数组
-        if (m_Pages.Length == 0)
+        if (m_Pages==null||m_Pages.Length == 0)
         {
+            if (m_PageContent.childCount==0)
+            {
+                Debug.LogError("Page个数不能为空，请添加page");
+#if UNITY_EDITOR
+                EditorApplication.isPlaying = false;
+#endif
+            }
             m_Pages = new GameObject[m_PageContent.childCount];
             loadFromPrefab = false;
         }
 
         //初始化页面
-        for (int i = 0; i < m_PageContent.childCount; i++)
+        for (int i = 0; i < m_Pages.Length; i++)
         {
             m_Pages[i] = loadFromPrefab ? Instantiate(m_Pages[i], m_PageContent) : m_PageContent.GetChild(i).gameObject;
             var viewItem = m_Pages[i].GetComponent<ScrollItem>();

@@ -19,7 +19,7 @@ public class ScrollItem : MonoBehaviour
     private void SmoothItemSize()
     {
         var distanceWithMidPos = (EricScrollView.ViewMidPos - (Vector2)transform.position).magnitude;
-        var scale = Mathf.Clamp(1-distanceWithMidPos * scrollView.ScaleInfluenceDistanceReciprocal,0.5f,1);
+        var scale = Mathf.Clamp(1-distanceWithMidPos * scrollView.ScaleInfluenceDistanceReciprocal,scrollView.cellScale,1);
         gameObject.transform.localScale = new Vector2(scale,scale);
     }
 }
