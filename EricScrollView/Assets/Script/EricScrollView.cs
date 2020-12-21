@@ -18,21 +18,23 @@ public class EricScrollView : MonoBehaviour
 
     [SerializeField] [Tooltip("是否使用pageDot页签")]
     public bool usePageDot;
-    [SerializeField][Tooltip("初始显示的页签index")]
+
+    [SerializeField] [Tooltip("初始显示的页签index")]
     private sbyte StartIndex;
+
     public byte pageDotCount;
     public Sprite DotImage;
     public Sprite DotImageHighLight;
-    [Tooltip("页签和page数量保持一致")] 
-    public bool pageDotMatchPageCount;
+    [Tooltip("页签和page数量保持一致")] public bool pageDotMatchPageCount;
     private PageDots pageDotMgr;
 
     #endregion
 
     #region Page
-    [Tooltip("滑动页签之间的间距")]
-    [SerializeField]
+
+    [Tooltip("滑动页签之间的间距")] [SerializeField]
     private float itemSpacing;
+
     [Tooltip("滑动页面：自己的panelPrefab")] [SerializeField]
     private GameObject[] m_Pages;
 
@@ -48,6 +50,19 @@ public class EricScrollView : MonoBehaviour
 
     private Coroutine pullOverCoroutine;
 
+    /// <summary>
+    /// 滑动触发时机0-0.5。
+    /// 例如：
+    /// 0.5为：距离中点最近的item和中点距离为两个item距离的一半则触发滑动停靠
+    /// 0.1为：距离中点最近的item和中点距离为两个item距离的0.1则触发滑动停靠
+    /// </summary>
+    [FormerlySerializedAs("scrollPullOverSmoth")]
+    [FormerlySerializedAs("scrollTriggerRate")]
+    [Range(0, 1f)] [SerializeField] 
+    [Tooltip("滑动停靠的灵敏度，越小越灵敏")]
+    private float scrollPullOverSensitive;
+
+    private float ScrollPulloverRate => scrollPullOverSensitive * 0.5f;
     //停靠开关 max127
     private sbyte PullOverIndex = -1;
 
@@ -92,7 +107,6 @@ public class EricScrollView : MonoBehaviour
     /// scrollRect有效滚动距离（Content下第0个item到最后一个之间的距离）的倒数
     /// </summary>
     public float ScrollWidthReciprocal => scrollWidthReciprocal;
-    
 
     #endregion
 
@@ -104,7 +118,6 @@ public class EricScrollView : MonoBehaviour
     void Start()
     {
         InitMemgers();
-
     }
 
     /// <summary>
@@ -142,6 +155,7 @@ public class EricScrollView : MonoBehaviour
         {
             m_Ratios[i] = (m_Pages[i].transform.localPosition.x - firstItemLocalPosX) * ScrollWidthReciprocal;
         }
+
         //初始化初始位置
         InitOthers();
         OnPullOver(0);
@@ -181,7 +195,7 @@ public class EricScrollView : MonoBehaviour
     {
         m_PageContent = transform.Find("Scroll View/Viewport/Content");
         bool loadFromPrefab = true;
-        
+
         //初始化页签数组
         if (m_Pages == null || m_Pages.Length == 0)
         {
@@ -214,10 +228,11 @@ public class EricScrollView : MonoBehaviour
                 ? Instantiate(m_Pages[i], m_PageContent)
                 : m_PageContent.GetChild(i).gameObject;
             var scrollItem = m_Pages[i].GetComponent<ScrollItem>();
-            if (scrollItem==null)
+            if (scrollItem == null)
             {
                 scrollItem = m_Pages[i].AddComponent<ScrollItem>();
             }
+
             scrollItem.Init(this);
         }
     }
@@ -239,7 +254,7 @@ public class EricScrollView : MonoBehaviour
     /// <summary>
     /// 滑动停靠
     /// </summary>
-    private void PullOver()
+    private void PullOver(bool movingRight)
     {
         //找到最近中点的页
         GameObject nearestMidPage = m_Pages[0];
@@ -253,11 +268,45 @@ public class EricScrollView : MonoBehaviour
                 index = (sbyte) i;
             }
         }
+
+        var distanceWithMid = DistanceWithMidPos(nearestMidPage.transform.position);
         
+        //Goto=>优化该部分代码
+        if (!movingRight) //向左移动
+        {
+            if (IsLeftBehandMid(nearestMidPage.transform.position)) //在中点左边
+            {
+                //是否滑动距离达到触发标准，向移动方向借一位滑靠
+                if (distanceWithMid > ScrollPulloverRate * Vector2.Distance(m_Pages[0].transform.position, m_Pages[1]
+                        .transform.position) && index != 0 && index != m_Pages.Length - 1)
+                {
+                    index += 1;
+                    nearestMidPage = m_Pages[index];
+                }
+            }
+        }
+
+        if (movingRight)
+        {
+            if (!IsLeftBehandMid(nearestMidPage.transform.position)) //在中点右边
+            {
+                //是否滑动距离达到触发标准，向移动方向借一位滑靠
+                if (distanceWithMid > ScrollPulloverRate * Vector2.Distance(m_Pages[0].transform.position, m_Pages[1]
+                        .transform.position) && index != 0 && index != m_Pages.Length - 1)
+                {
+                    index -= 1;
+                }
+            }
+        }
 
         //开启停靠
         PullOverIndex = index;
         OnPullOver(index);
+    }
+
+    private bool IsLeftBehandMid(Vector2 pos)
+    {
+        return ViewMidPos.x - pos.x > 0;
     }
 
     /// <summary>
@@ -271,7 +320,7 @@ public class EricScrollView : MonoBehaviour
         while (true)
         {
             if (Input.GetMouseButtonUp(0) && PullOverDirty)
-                PullOver();
+                PullOver(m_ScrollRect.velocity.x > 0);
             yield return null;
             if (PullOverIndex == -1)
                 continue;

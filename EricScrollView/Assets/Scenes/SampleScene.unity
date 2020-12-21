@@ -642,6 +642,11 @@ PrefabInstance:
       propertyPath: pageDotCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7622858355792422541, guid: 1de3d3c46754f2b4685b0c9f9df7d774,
+        type: 3}
+      propertyPath: scrollTriggerRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7622858355792422542, guid: 1de3d3c46754f2b4685b0c9f9df7d774,
         type: 3}
       propertyPath: m_Name
